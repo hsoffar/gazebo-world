@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="my_world">
+    <gui>
+      <camera name="user_camera">
+        <pose>-17 -15 13 0 0.55 0.72</pose>
+      </camera>
+    </gui>
+
+    <include><uri>model://ground_plane</uri></include>
+    <include><uri>model://sun</uri></include>
+
+    <include><uri>model://my_building</uri></include>
+
+    <include>
+      <uri>model://my_bot</uri>
+      <name>my_bot_1</name>
+      <pose>-2 1.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://my_bot</uri>
+      <name>my_bot_2</name>
+      <pose>2 -1.5 0 0 0 1.5707</pose>
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>
+      <pose>3.5 2.2 0 0 0 1.5707</pose>
+    </include>
+
+    <plugin name="welcome" filename="libwelcome.so"/>
+  </world>
+</sdf>
